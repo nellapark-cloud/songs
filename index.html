@@ -150,6 +150,10 @@ section.block{padding:72px 0;border-top:1px solid var(--line)}
 .credits{margin:28px 0 0;padding:0;list-style:none;border-top:1px solid var(--line)}
 .credits li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:14px;line-height:1.75;color:var(--ink2)}
 .credits li em{font-style:normal;font-size:12px;font-weight:500;color:var(--muted);padding-top:2px}
+.credits a.mail{color:var(--ink);font-weight:500;border-bottom:1px solid var(--line);padding-bottom:1px;transition:border-color .2s}
+.credits a.mail:hover{border-color:var(--ink)}
+.about-text .mbox{margin-top:0;border-top:0}
+@media (min-width:861px){.about-photo{position:sticky;top:60px;align-self:start;height:calc(100svh - 60px);min-height:640px;max-height:860px}}
 
 
 /* broadcast */
@@ -407,17 +411,8 @@ body.lock{overflow:hidden}
       <ul class="credits">
         <li><em>보컬</em><span>『아버지의 노래 (The Father's Song)』 EP<br>예수원 가는 길 4집 『일상의 예배』 · 예수원 가는 길 3집<br>좋은씨앗 6집 『Worship』 · 『필데이브와 찬양하는 친구들』<br>손영지 『내가 서 있는 풍경』 · 아크워십 『ARK Worship 2nd』<br>『Piano &amp; Vocal Worship』 · 『7080 복음성가 Golden』 · 『유리공주 원경이의 축복송』<br>말씀대로 찬양 1 『나는 죽고 예수는 살고』 · 『하나님의 구원과 능력』 · 『주의 은혜라』 · 『주를 예배함이』 외</span></li>
         <li id="broadcast"><em>방송</em><span>더 그레이스 THE GRACE — 말씀과 찬양이 있는 생방송<br>매주 화요일 밤 10시 · 비컴퍼니 유튜브 '라이브'<br><a class="air" id="air" href="https://www.youtube.com/@BeecompanyCCM/streams" target="_blank" rel="noopener"><i></i><b id="airTxt">방송 보러 가기</b><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></span></li>
+        <li id="contact"><em>문의</em><span><a class="mail" href="mailto:nellapark@gmail.com">nellapark@gmail.com</a><br>찬양 인도 · 곡 사용 · 녹음 협업</span></li>
       </ul>
-    </div>
-  </div>
-</section>
-
-<section class="block contact" id="contact">
-  <div class="wrap">
-    <h2 class="rv">문의</h2>
-    <div class="rv">
-      <a class="mail" href="mailto:nellapark@gmail.com">nellapark@gmail.com</a>
-      <p>찬양 인도 · 곡 사용 · 녹음 협업</p>
       <details class="mbox" id="mbox">
       <summary><span class="t">사역 신청<small>내용을 남겨 주시면 확인 후 연락드리겠습니다.</small></span><span class="pm" aria-hidden="true"></span></summary>
       <form class="mform" id="mform" novalidate>
@@ -440,6 +435,7 @@ body.lock{overflow:hidden}
     </div>
   </div>
 </section>
+
 <footer><div class="wrap foot-row"><span>© 2026 박동준 PARK DONG JUN</span><span class="visits" id="visits" hidden>오늘 <b id="vToday">-</b> · 전체 <b id="vTotal">-</b></span></div></footer>
 
 <div class="dock" id="dock" role="region" aria-label="미니 플레이어">
