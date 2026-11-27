@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#DCEBEA"/>
+      <stop offset=".45" stop-color="#F1EFE8"/>
+      <stop offset=".72" stop-color="#FBE9E1"/>
+      <stop offset="1" stop-color="#FDF3EC"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="1120" cy="560" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFBF4"/>
+      <stop offset=".25" stop-color="#FFF1E6" stop-opacity=".95"/>
+      <stop offset=".6" stop-color="#FBE3D8" stop-opacity=".45"/>
+      <stop offset="1" stop-color="#FBE3D8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="ray" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity=".55"/>
+    </linearGradient>
+    <linearGradient id="m1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9D9D3"/><stop offset="1" stop-color="#D9E3DB"/></linearGradient>
+    <linearGradient id="m2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9C6AE"/><stop offset="1" stop-color="#B9D0B9"/></linearGradient>
+    <linearGradient id="m3" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8DB38E"/><stop offset="1" stop-color="#9EBE98"/></linearGradient>
+    <linearGradient id="m4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6F9B70"/><stop offset="1" stop-color="#5F8A61"/></linearGradient>
+    <linearGradient id="mist" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF" stop-opacity="0"/><stop offset=".5" stop-color="#FFFFFF" stop-opacity=".7"/><stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/></linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBF1E6"/><stop offset="1" stop-color="#EEDFCC"/></linearGradient>
+    <style>
+      .rays{transform-origin:1120px 560px;animation:breathe 9s ease-in-out infinite}
+      @keyframes breathe{0%,100%{opacity:.55}50%{opacity:1}}
+      .mistband{animation:drift 30s ease-in-out infinite alternate}
+      @keyframes drift{to{transform:translateX(-80px)}}
+      .bird{animation:fly 28s linear infinite}
+      @keyframes fly{0%{transform:translate(0,0)}100%{transform:translate(-600px,-60px)}}
+      .leaf{animation:fall 16s linear infinite;opacity:.8}
+      @keyframes fall{0%{transform:translate(0,0) rotate(0)}100%{transform:translate(-220px,420px) rotate(300deg)}}
+      @media (prefers-reduced-motion:reduce){.rays,.mistband,.bird,.leaf{animation:none}}
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#sky)"/>
+
+  <!-- light rays -->
+  <g class="rays" fill="url(#ray)">
+    <path d="M1120 560 L880 0 L960 0Z"/><path d="M1120 560 L1030 0 L1090 0Z"/><path d="M1120 560 L1160 0 L1230 0Z"/>
+    <path d="M1120 560 L1300 0 L1380 0Z"/><path d="M1120 560 L1460 0 L1560 0Z"/><path d="M1120 560 L720 0 L800 0Z"/>
+  </g>
+  <circle cx="1120" cy="560" r="520" fill="url(#glow)"/>
+  <circle cx="1120" cy="560" r="70" fill="#FFFDF8"/>
+
+  <!-- soft clouds -->
+  <g fill="#FFFFFF" opacity=".75">
+    <ellipse cx="420" cy="210" rx="150" ry="22"/><ellipse cx="500" cy="196" rx="90" ry="18"/>
+    <ellipse cx="1380" cy="260" rx="130" ry="18"/><ellipse cx="900" cy="140" rx="110" ry="14" opacity=".7"/>
+  </g>
+
+  <!-- birds -->
+  <g class="bird" stroke="#7A8F80" stroke-width="2.4" fill="none" stroke-linecap="round">
+    <path d="M1300 360 q9 -9 18 0 q9 -9 18 0"/><path d="M1352 388 q7 -7 14 0 q7 -7 14 0"/><path d="M1262 396 q6 -6 12 0 q6 -6 12 0"/>
+  </g>
+
+  <!-- far ridge -->
+  <path d="M0 560 C160 520 300 500 460 530 C620 560 760 520 900 548 C1040 576 1180 560 1320 540 C1440 524 1520 536 1600 548 L1600 900 L0 900Z" fill="url(#m1)"/>
+  <rect class="mistband" x="-100" y="540" width="1900" height="70" fill="url(#mist)"/>
+
+  <!-- second hills -->
+  <path d="M0 640 C180 590 360 600 540 630 C720 660 860 610 1040 615 C1220 620 1380 660 1600 630 L1600 900 L0 900Z" fill="url(#m2)"/>
+  <g fill="#93B597">
+    <circle cx="250" cy="602" r="16"/><circle cx="270" cy="596" r="20"/><circle cx="292" cy="604" r="15"/>
+    <circle cx="1420" cy="632" r="15"/><circle cx="1440" cy="626" r="19"/>
+  </g>
+
+  <!-- third hills -->
+  <path d="M0 720 C220 670 430 690 640 720 C850 750 1000 690 1200 690 C1380 690 1500 720 1600 712 L1600 900 L0 900Z" fill="url(#m3)"/>
+
+  <!-- path toward the light -->
+  <path d="M1080 690 C1060 720 1120 740 1080 775 C1040 810 1150 850 1100 900 L1250 900 C1290 850 1170 815 1220 775 C1265 740 1150 718 1110 690Z" fill="url(#path)" opacity=".92"/>
+
+  <!-- one tree on the hill -->
+  <g>
+    <path d="M520 712 C522 680 524 660 526 640" stroke="#7A6656" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <path d="M524 668 C540 656 552 648 566 642 M524 676 C508 664 496 656 482 652" stroke="#7A6656" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="526" cy="618" r="38" fill="#7FA77E"/><circle cx="494" cy="638" r="26" fill="#86AD85"/><circle cx="560" cy="636" r="28" fill="#79A178"/>
+    <circle cx="530" cy="596" r="22" fill="#8DB48B"/>
+    <g fill="#F4D6DA"><circle cx="508" cy="612" r="4"/><circle cx="546" cy="604" r="3.5"/><circle cx="530" cy="634" r="3.5"/><circle cx="566" cy="628" r="3"/><circle cx="490" cy="636" r="3"/></g>
+  </g>
+
+  <!-- meadow -->
+  <path d="M0 810 C260 770 520 790 760 815 C980 838 1220 795 1600 806 L1600 900 L0 900Z" fill="url(#m4)"/>
+  <g fill="#FFFFFF"><circle cx="140" cy="838" r="3.5"/><circle cx="330" cy="852" r="3"/><circle cx="690" cy="846" r="3.5"/><circle cx="960" cy="856" r="3"/><circle cx="1360" cy="846" r="3.5"/></g>
+  <g fill="#F2C9CF"><circle cx="210" cy="858" r="3.5"/><circle cx="560" cy="862" r="3"/><circle cx="1180" cy="860" r="3.5"/><circle cx="1500" cy="856" r="3"/></g>
+  <g fill="#DCD3EE"><circle cx="420" cy="868" r="3"/><circle cx="1290" cy="870" r="3"/></g>
+
+  <!-- drifting petals -->
+  <g fill="#F4CDD3">
+    <path class="leaf" d="M1240 420 c4 -6 10 -4 8 2 c-2 5 -7 4 -8 -2z"/>
+    <path class="leaf" style="animation-delay:-5s" d="M1400 380 c4 -6 10 -4 8 2 c-2 5 -7 4 -8 -2z"/>
+    <path class="leaf" style="animation-delay:-9s" d="M1520 460 c4 -6 10 -4 8 2 c-2 5 -7 4 -8 -2z"/>
+    <path class="leaf" style="animation-delay:-12s" d="M1000 360 c4 -6 10 -4 8 2 c-2 5 -7 4 -8 -2z"/>
+  </g>
+</svg>
