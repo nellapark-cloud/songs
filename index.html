@@ -161,10 +161,11 @@ section.block{padding:72px 0;border-top:1px solid var(--line)}
 .bc .label{color:var(--accent)}
 .bc h2{margin:14px 0 0;font-size:clamp(36px,5vw,64px);line-height:1.05;font-weight:800;letter-spacing:-.04em;color:var(--ink)}
 .bc h2 span{display:block;margin-top:12px;font-size:13px;font-weight:500;letter-spacing:.22em;color:var(--muted)}
-.bc .air{align-self:flex-start;display:inline-flex;align-items:center;gap:8px;margin-top:24px;padding:7px 14px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.04em}
-.bc .air i{width:7px;height:7px;border-radius:50%;background:var(--accent)}
-.bc .air.on{background:#FDECEC;color:#C4373C}
-.bc .air.on i{background:#E5484D;box-shadow:0 0 0 0 rgba(229,72,77,.6);animation:onair 1.6s infinite}
+.air{display:inline-flex;align-items:center;gap:7px;margin-top:10px;padding:5px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.02em;text-decoration:none}
+.air:hover{background:#F0DCE0}
+.air i{display:none;width:7px;height:7px;border-radius:50%;background:#E5484D}
+.air.on{background:#FDECEC;color:#C4373C}
+.air.on i{display:block;box-shadow:0 0 0 0 rgba(229,72,77,.6);animation:onair 1.6s infinite}
 @keyframes onair{70%{box-shadow:0 0 0 8px rgba(229,72,77,0)}100%{box-shadow:0 0 0 0 rgba(229,72,77,0)}}
 .bc .lead{margin:28px 0 0;font-size:16px;line-height:1.85;color:var(--ink2);max-width:480px}
 .bc dl{margin:28px 0 0;display:grid;grid-template-columns:auto 1fr;gap:10px 24px;padding-top:22px;border-top:1px solid rgba(0,0,0,.09);font-size:14px;max-width:480px}
@@ -173,7 +174,7 @@ section.block{padding:72px 0;border-top:1px solid var(--line)}
 .bc .go{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;margin-top:32px;min-height:48px;padding:0 24px;border-radius:999px;background:var(--accent);color:#fff;font-size:14px;font-weight:600;transition:opacity .2s}
 .bc .go:hover{opacity:.88}
 @media (max-width:860px){.bc{grid-template-columns:1fr}.bc-photo{min-height:0;aspect-ratio:4/3}}
-@media (prefers-reduced-motion:reduce){.bc .air.on i{animation:none}}
+@media (prefers-reduced-motion:reduce){.air.on i{animation:none}}
 
 /* contact */
 .contact .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:48px;align-items:baseline}
@@ -396,23 +397,6 @@ body.lock{overflow:hidden}
   </div>
 </section>
 
-<section class="bc" id="broadcast" aria-label="방송">
-  <figure class="bc-photo"><img src="img/profile-tall-bw.jpg" alt="박동준 프로필 사진" loading="lazy" width="926" height="1600"><figcaption>The Grace · Live</figcaption></figure>
-  <div class="bc-text">
-    <div class="rv">
-      <p class="label">Broadcast</p>
-      <h2>더 그레이스<span>THE GRACE</span></h2>
-    </div>
-    <span class="air rv" id="air"><i></i><b id="airTxt">매주 화요일 밤 10시</b></span>
-    <p class="lead rv">말씀과 찬양이 있는 방송.<br>찬양으로 지역과 나라를 넘어 함께 은혜를 나누는 시간입니다.</p>
-    <dl class="rv">
-      <dt>진행</dt><dd>박동준 PARK DONG JUN</dd>
-      <dt>방송</dt><dd>매주 화요일 밤 10시 · 생방송</dd>
-      <dt>채널</dt><dd>비컴퍼니 유튜브 '라이브'</dd>
-    </dl>
-    <a class="go rv" href="https://www.youtube.com/@BeecompanyCCM/streams" target="_blank" rel="noopener">방송 보러 가기<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
-  </div>
-</section>
 
 <section class="about-split" id="about">
   <figure class="about-photo"><img src="img/grace-cutout.webp" alt="박동준 프로필 사진" loading="lazy" width="329" height="1100"></figure>
@@ -422,7 +406,7 @@ body.lock{overflow:hidden}
       <p>CCM 보컬리스트로 여러 앨범에 목소리를 보탰고, 직접 쓴 노래 「당신의 하루가」로 아침을 여는 고백을 노래합니다. 화려한 기교보다 오래 남는 노래, 함께 부를 수 있는 노래를 꿈꿉니다.</p>
       <ul class="credits">
         <li><em>보컬</em><span>『아버지의 노래 (The Father's Song)』 EP<br>예수원 가는 길 4집 『일상의 예배』 · 예수원 가는 길 3집<br>좋은씨앗 6집 『Worship』 · 『필데이브와 찬양하는 친구들』<br>손영지 『내가 서 있는 풍경』 · 아크워십 『ARK Worship 2nd』<br>『Piano &amp; Vocal Worship』 · 『7080 복음성가 Golden』 · 『유리공주 원경이의 축복송』<br>말씀대로 찬양 1 『나는 죽고 예수는 살고』 · 『하나님의 구원과 능력』 · 『주의 은혜라』 · 『주를 예배함이』 외</span></li>
-        <li><em>방송</em><span>CCM 라디오 '더 그레이스' — 비컴퍼니 유튜브 채널 '라이브'</span></li>
+        <li id="broadcast"><em>방송</em><span>더 그레이스 THE GRACE — 말씀과 찬양이 있는 생방송<br>매주 화요일 밤 10시 · 비컴퍼니 유튜브 '라이브'<br><a class="air" id="air" href="https://www.youtube.com/@BeecompanyCCM/streams" target="_blank" rel="noopener"><i></i><b id="airTxt">방송 보러 가기</b><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a></span></li>
       </ul>
     </div>
   </div>
@@ -908,7 +892,7 @@ $('mform').addEventListener('submit', async e => {
 function airCheck(){
   const k = new Date(Date.now() + 9*3600e3), d = k.getUTCDay(), m = k.getUTCHours()*60 + k.getUTCMinutes();
   const on = d === 2 && m >= 22*60;
-  $('air').classList.toggle('on', on); $('airTxt').textContent = on ? 'ON AIR · 지금 방송 중' : '매주 화요일 밤 10시';
+  $('air').classList.toggle('on', on); $('airTxt').textContent = on ? 'ON AIR · 지금 방송 중' : '방송 보러 가기';
 }
 airCheck(); setInterval(airCheck, 60000);
 
